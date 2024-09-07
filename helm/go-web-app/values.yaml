@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: sirishassss/go-web:v1
+  repository: sirishassss/go-web-app:v1
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "10752195960"
