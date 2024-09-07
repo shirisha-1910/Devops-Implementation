@@ -90,4 +90,4 @@ jobs:
         git config --global user.name "shirisha-1910"
         git add helm/go-web-app-chart/values.yaml
         git commit -m "Update tag in Helm chart"
-        git push
+        git pushh
