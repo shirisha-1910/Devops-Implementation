@@ -22,7 +22,7 @@ RUN go build -o main .
 FROM gcr.io/distroless/base
 
 # Copy the binary from the previous stage
-COPY --from=base /app/main .
+COPY --from=base /app/main .,
 
 # Copy the static files from the previous stage
 COPY --from=base /app/static ./static
