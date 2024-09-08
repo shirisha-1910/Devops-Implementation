@@ -40,24 +40,24 @@ Deploy the application using Helm charts and Kubernetes manifests. Ensure that t
  
 # 6. Install Argo CD
 
-# Install Argo CD using manifests
+## Install Argo CD using manifests
 
     kubectl create namespace argocd
     
     kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 
-# Access the Argo CD UI (Loadbalancer service) 
+## Access the Argo CD UI (Loadbalancer service) 
 
 
       kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 
 
-# Get the Loadbalancer service IP
+## Get the Loadbalancer service IP
 
          kubectl get svc argocd-server -n argocd
 
-## 7. Continuous Integration and Deployment Automation
+# 7. Continuous Integration and Deployment Automation
 
 The CI/CD pipeline automates the deployment process as follows:
 
