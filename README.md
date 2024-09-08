@@ -65,9 +65,11 @@ Deploy the application using Helm charts and Kubernetes manifests. Ensure that t
 
 we need to configure the following secrets in GitHub:
 
-- GitHub Token: Add a GitHub token to allow the pipeline to commit updates to the repository. This token should be added as a secret in our GitHub repository settings under the name TOKEN.
+### GitHub Token:
+  
+- Add a GitHub token to allow the pipeline to commit updates to the repository. This token should be added as a secret in our GitHub repository settings under the name TOKEN.
 
-- DockerHub Credentials:
+  ### DockerHub Credentials:
   
 - DockerHub Username: Add DockerHub username as a secret in GitHub under the name DOCKERHUB_USERNAME.
   
