@@ -35,7 +35,8 @@ To check the NGINX Ingress Controller’s status:
 
 Deploy the application using Helm charts and Kubernetes manifests. Ensure that the Helm values file is updated with the correct image tag.
 
- helm upgrade --install go-web-app helm/go-web-app
+
+       helm upgrade --install go-web-app helm/go-web-app
  
 # 6. Install Argo CD
 
