@@ -98,3 +98,10 @@ To access deployed application:
   
 - Browse the Application: Navigate to http://go-web-app.local/courses in web browser to view application.
 - This setup ensures that any updates to the codebase trigger a full rebuild and redeployment, keeping application up-to-date seamlessly.
+
+## Argo CD Synchronization
+
+After the pipeline rebuilds and redeploys the application, Argo CD will automatically detect the changes. It will sync with the latest commit ID from GitHub, ensuring that the application is updated with the latest changes. This synchronization process keeps the deployed application in the cluster aligned with the state defined in the GitHub repository.
+
+Note: Argo CD relies on the Git repository as the source of truth for the desired state of the application. If changes are made directly in the Kubernetes cluster instead of updating the Git repository, Argo CD will not recognize or accept these changes. The cluster state will be overwritten during the next synchronization cycle to match the state defined in the repository.
+
