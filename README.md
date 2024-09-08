@@ -50,12 +50,12 @@ Deploy the application using Helm charts and Kubernetes manifests. Ensure that t
 # Access the Argo CD UI (Loadbalancer service) 
 
 
-kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+      kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 
 
 # Get the Loadbalancer service IP
 
-kubectl get svc argocd-server -n argocd
+         kubectl get svc argocd-server -n argocd
 
 ## 7. Continuous Integration and Deployment Automation
 
