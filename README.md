@@ -41,6 +41,7 @@ Deploy the application using Helm charts and Kubernetes manifests. Ensure that t
 # 6. Install Argo CD
 
 # Install Argo CD using manifests
+
     kubectl create namespace argocd
     
     kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
