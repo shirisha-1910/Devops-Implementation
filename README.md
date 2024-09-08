@@ -16,7 +16,9 @@ We should  write a Dockerfile for our application. The Dockerfile defines the en
 
 # 3. Create EKS Cluster
 For EKS creation we can follow the AWS documentation for commands or to create an EKS cluster.
+
               eksctl create cluster --name my-cluster --region ap-south-1
+              
 (we can change the instance type as per our application requirements by using autoscaling(edit) or else we can also apply configure yaml file)
 
 # 4. Install NGINX Ingress Controller
