@@ -25,9 +25,9 @@ To manage ingress resources, we need to install the NGINX Ingress Controller in 
            
 To check the NGINX Ingress Controller’s status:
 
-   kubectl get pods --namespace=ingress-nginx
+              kubectl get pods --namespace=ingress-nginx
    
-   kubectl get svc --namespace=ingress-nginx
+            kubectl get svc --namespace=ingress-nginx
    
 # 5. Apply Kubernetes Manifests
 
