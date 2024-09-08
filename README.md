@@ -69,9 +69,9 @@ we need to configure the following secrets in GitHub:
 
 - DockerHub Credentials:
   
-        - DockerHub Username: Add DockerHub username as a secret in GitHub under the name DOCKERHUB_USERNAME.
+- DockerHub Username: Add DockerHub username as a secret in GitHub under the name DOCKERHUB_USERNAME.
   
-        - DockerHub Token: Generate a token in DockerHub and add it as a secret in GitHub under the name DOCKERHUB_TOKEN.
+- DockerHub Token: Generate a token in DockerHub and add it as a secret in GitHub under the name DOCKERHUB_TOKEN.
   
 ## Code Changes Trigger Pipeline: 
 
