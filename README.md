@@ -61,9 +61,19 @@ Deploy the application using Helm charts and Kubernetes manifests. Ensure that t
 
 # 7. Continuous Integration and Deployment Automation
 
-The CI/CD pipeline automates the deployment process as follows:
+## 1. Configuring GitHub Secrets
 
-## Code Changes Trigger Pipeline: 
+we need to configure the following secrets in GitHub:
+
+- GitHub Token: Add a GitHub token to allow the pipeline to commit updates to the repository. This token should be added as a secret in our GitHub repository settings under the name TOKEN.
+
+- DockerHub Credentials:
+        - DockerHub Username: Add DockerHub username as a secret in GitHub under the name DOCKERHUB_USERNAME.
+        - DockerHub Token: Generate a token in DockerHub and add it as a secret in GitHub under the name DOCKERHUB_TOKEN.
+  
+## 2. Code Changes Trigger Pipeline: 
+
+The CI/CD pipeline automates the deployment process as follows:
 
 - Whenever changes are pushed to the GitHub repository, the pipeline is automatically triggered. This process includes:
 - Building the Docker Image: The pipeline rebuilds the Docker image with a new tag, which is generated based on the GitHub run ID.
@@ -72,7 +82,7 @@ The CI/CD pipeline automates the deployment process as follows:
 
 - Handling Ignored Paths: In the GitHub Actions workflow, paths related to Helm charts, K8s manifests, and the README are ignored for triggering pipeline runs. This means that changes to these files will not trigger the pipeline. However, if changes occur in other paths, the pipeline will loop and execute the build, push, and deployment processes again.
 
-## 9. Accessing Application
+## 3. Accessing Application
 
 To access deployed application:
 
