@@ -61,17 +61,19 @@ Deploy the application using Helm charts and Kubernetes manifests. Ensure that t
 
 # 7. Continuous Integration and Deployment Automation
 
-## 1. Configuring GitHub Secrets
+## Configuring GitHub Secrets
 
 we need to configure the following secrets in GitHub:
 
 - GitHub Token: Add a GitHub token to allow the pipeline to commit updates to the repository. This token should be added as a secret in our GitHub repository settings under the name TOKEN.
 
 - DockerHub Credentials:
+  
         - DockerHub Username: Add DockerHub username as a secret in GitHub under the name DOCKERHUB_USERNAME.
+  
         - DockerHub Token: Generate a token in DockerHub and add it as a secret in GitHub under the name DOCKERHUB_TOKEN.
   
-## 2. Code Changes Trigger Pipeline: 
+## Code Changes Trigger Pipeline: 
 
 The CI/CD pipeline automates the deployment process as follows:
 
@@ -82,13 +84,15 @@ The CI/CD pipeline automates the deployment process as follows:
 
 - Handling Ignored Paths: In the GitHub Actions workflow, paths related to Helm charts, K8s manifests, and the README are ignored for triggering pipeline runs. This means that changes to these files will not trigger the pipeline. However, if changes occur in other paths, the pipeline will loop and execute the build, push, and deployment processes again.
 
-## 3. Accessing Application
+## Accessing Application
 
 To access deployed application:
 
 - Resolve Ingress IP: The Ingress resource uses a DNS name assigned to the LoadBalancer service. Perform an nslookup on this DNS name to retrieve the IP addresses.
 
 - Update /etc/hosts: Choose one of the IP addresses returned by nslookup and add it to local /etc/hosts file along withe host name:
+- 
       <IP_ADDRESS> go-web-app.local
+  
 - Browse the Application: Navigate to http://go-web-app.local/courses in web browser to view application.
 - This setup ensures that any updates to the codebase trigger a full rebuild and redeployment, keeping application up-to-date seamlessly.
